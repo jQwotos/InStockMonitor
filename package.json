@@ -1,0 +1,13 @@
+{
+  "name": "in-stock-monitor",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Jason Le <le.kent.jason@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^6.4.0"
+  }
+}
