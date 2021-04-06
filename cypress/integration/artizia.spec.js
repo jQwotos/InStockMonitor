@@ -3,10 +3,16 @@ context('Aritzia', () => {
         cy.visit("https://www.aritzia.com/en/product/raindrop-jacket/64047.html?dwvar_64047_color=18287");
 
         // If the country selector pops up, select Canada
-        cy.get('.js-close')
-            .click();
+        // Conditional Getting from https://docs.cypress.io/guides/core-concepts/conditional-testing#Element-existence
+        cy.get('body')
+            .then(($body) => {
+                if ($body.find('.js-close').length) {
+                    cy.get('.js-close')
+                        .click();
+                }
+            });
 
-        // Select the small size
+        // Select the xtra small size
         cy.get(':nth-child(2) > .sizeanchor > span')
             .click();
 
