@@ -23,3 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.overwrite("visit", (originalFn, url, options = {}) => {
+    return originalFn(
+        url,
+        {
+            headers: {
+                "Accept-Encoding": "gzip, deflate, br",
+            },
+            ...options,
+        }
+    );
+});
+
+Cypress.Commands.add('potato', (param) => {
+    console.log("Potato!", param);
+})
