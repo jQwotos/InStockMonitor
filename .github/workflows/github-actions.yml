@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - main
-job:
+jobs:
   Check-Stocks:
     runs-on: ubuntu-latest
     name: Check Stocks
