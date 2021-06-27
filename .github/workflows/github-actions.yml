@@ -1,7 +1,7 @@
 name: InStock Monitor
 on:
   schedule:
-    - cron: '0 7,0 10, 0 20'
+    - cron: '0 7,0 10, 0 20 * * *'
   push:
     branches:
       - main
