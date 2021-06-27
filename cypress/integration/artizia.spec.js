@@ -1,5 +1,5 @@
 context('Aritzia', () => {
-    it('Raindrop Jacket Low stock Warning', () => {
+    it.skip('Raindrop Jacket Low stock Warning', () => {
         cy.visit("https://www.aritzia.com/en/product/raindrop-jacket/64047.html?dwvar_64047_color=18287");
 
         // If the country selector pops up, select Canada
